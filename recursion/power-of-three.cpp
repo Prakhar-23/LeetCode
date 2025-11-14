@@ -7,9 +7,7 @@ public:
         {
            n /= 3;
         }
-        if(n<=0) return false;
-        else if(n==1) return true;
-        else return false;
+        return n==1;
      
     }
 };
