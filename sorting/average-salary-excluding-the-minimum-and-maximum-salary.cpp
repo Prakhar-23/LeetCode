@@ -10,7 +10,7 @@ public:
             total += x;
         }
         total = total - (min + max);
-        double avg = total/(salary.size()-2);
+        double avg = ( total/(salary.size()-2) );
         return avg;
     }
 };
