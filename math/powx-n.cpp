@@ -1,24 +1,28 @@
 class Solution {
 public:
-    double myPow(double x, int n) {
-         
-        if (n == 0) return 1.0;
-        if (x == 1.0) return 1.0;
-        if (x == -1.0) return (n % 2 == 0) ? 1.0 : -1.0;
+    double myPow(double x, int n) 
+    {
+      long long exp = n;          // use long long to safely handle INT_MIN
 
-        long long N = n;           
-        if (N < 0) {
+        if (exp == 0) return 1;     // x^0 = 1
+
+        // If exponent is negative, invert base and make exponent positive
+        if (exp < 0) {
             x = 1.0 / x;
-            N = -N;
+            exp = -exp;
         }
 
-        double res = 1.0;
-        while (N > 0) {
-            if (N & 1) res *= x;  
-            x *= x;            
-            N >>= 1;              
+        double result = 1.0;
+
+        // Fast exponentiation
+        while (exp > 0) {
+            if (exp % 2 == 1) {     // odd exponent
+                result *= x;
+            }
+            x *= x;                 // square the base
+            exp /= 2;               // halve the exponent
         }
 
-        return res;
+        return result;
     }
 };
