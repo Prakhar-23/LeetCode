@@ -10,7 +10,7 @@ public:
             }
         }
 
-        // fill remaining positions with zero
+      
         while (j < nums.size()) {
             nums[j] = 0;
             j++;
