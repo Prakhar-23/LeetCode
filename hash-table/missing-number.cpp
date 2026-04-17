@@ -1,19 +1,14 @@
 class Solution {
 public:
-    int missingNumber(vector<int>& nums) {
-        
+    int missingNumber(vector<int>& nums) 
+    {
         int n = nums.size();
-
-        //actual sum;
-        int sum_total= ( (n*(n+1))/2 );
-
-        int sum_raw=0;
-        //vector ka sum nikalenge
-        for(int x : nums)
+        int sum = (n*(n+1)/2);
+        int sum_arr=0;
+        for(int i=0;i<n;i++)
         {
-            sum_raw += x;
+            sum_arr+=nums[i];
         }
-
-        return sum_total - sum_raw;
+        return sum-sum_arr;
     }
 };
