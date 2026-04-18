@@ -1,9 +1,9 @@
 class Solution {
 public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) {
+    vector<int> findDisappearedNumbers(vector<int>& nums) 
+    {
         int n = nums.size();
 
-      
         for (int i = 0; i < n; i++) 
         {
             int index = abs(nums[i]) - 1;
@@ -13,7 +13,6 @@ public:
             }
         }
 
-        
         vector<int> result;
         for (int i = 0; i < n; i++)
         {
@@ -22,7 +21,7 @@ public:
                 result.push_back(i + 1);
             }
         }
-
+        
         return result;
     }
 };
