@@ -3,7 +3,7 @@ public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
         int n = nums.size();
 
-        // Step 1: Mark visited indices
+      
         for (int i = 0; i < n; i++) {
             int index = abs(nums[i]) - 1;
             if (nums[index] > 0) {
@@ -11,7 +11,7 @@ public:
             }
         }
 
-        // Step 2: Collect missing numbers
+        
         vector<int> result;
         for (int i = 0; i < n; i++) {
             if (nums[i] > 0) {
