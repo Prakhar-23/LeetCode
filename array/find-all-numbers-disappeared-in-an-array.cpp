@@ -4,17 +4,21 @@ public:
         int n = nums.size();
 
       
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) 
+        {
             int index = abs(nums[i]) - 1;
-            if (nums[index] > 0) {
+            if (nums[index] > 0) 
+            {
                 nums[index] = -nums[index];
             }
         }
 
         
         vector<int> result;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] > 0) {
+        for (int i = 0; i < n; i++)
+        {
+            if (nums[i] > 0) 
+            {
                 result.push_back(i + 1);
             }
         }
