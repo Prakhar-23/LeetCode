@@ -28,9 +28,6 @@ public:
         while(count2--) {
             nums[index++] = 2;
         }
-   
-
-
     }
 };
 
